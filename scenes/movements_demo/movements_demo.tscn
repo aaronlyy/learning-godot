@@ -49,9 +49,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008282185, -4.7683716e-07, -0.002811432)
 mesh = SubResource("PlaneMesh_hvaus")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1731681087]
-transform = Transform3D(-0.99999994, -2.2398202e-05, 5.9160034e-06, 0, 0.25537083, 0.9668432, -2.3166323e-05, 0.9668431, -0.2553708, 0.28423148, 12.004022, -2.2266786)
-
 [node name="Box" type="MeshInstance3D" parent="." unique_id=402544387]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5229573, 0.9782014, 4.464819)
 mesh = ExtResource("1_l88sr")
@@ -70,10 +67,13 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 mesh = SubResource("CylinderMesh_g4v7s")
 
 [node name="Capsule2" type="MeshInstance3D" parent="." unique_id=1629504930]
-transform = Transform3D(0.65713733, 0, -0.7537708, 0, 1, 0, 0.7537708, 0, 0.65713733, -2.6932194, 1.4431267, -2.6221542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6932194, 1.4431267, -2.6221542)
 mesh = SubResource("CapsuleMesh_g4v7s")
 surface_material_override/0 = SubResource("StandardMaterial3D_mjo2q")
 
 [node name="Nose" type="MeshInstance3D" parent="Capsule2" unique_id=115756436]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.35470915, 0.51292014)
 mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="Camera3D" type="Camera3D" parent="Capsule2" unique_id=1731681087]
+transform = Transform3D(-1, -3.5527137e-15, -8.7422784e-08, -5.1329344e-08, 0.8094859, 0.58713925, 7.0767506e-08, 0.58713925, -0.8094859, 0, 1.7666416, -1.185188)
